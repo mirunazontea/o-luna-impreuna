@@ -289,9 +289,9 @@ function loadWishes() {
     
     // Pentru demonstrație, adăugăm câteva dorințe inițiale
     wishes = [
-        "Să călătorim împreună în Italia 🇮🇹",
-        "Să avem o casă cu grădină 🏡",
-        "Să fim mereu fericiți împreună 💕"
+        "Sa mergem la concert Vama din nouu",
+        "Să avem o casă cu grădină si un caine.",
+        "Să iau licenta si sa intru la master"
     ];
     displayWishes();
 }
