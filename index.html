@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Lună Împreună</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <h1 class="title">O Lună Împreună</h1>
+        <div class="planets-container">
+            <button class="planet-btn" data-planet="sun">
+                <img src="sun.jpg" alt="Soare">
+                <span>Soarele Nostru</span>
+            </button>
+            <button class="planet-btn" data-planet="venus">
+                <img src="venus.jpg" alt="Venus">
+                <span>Venus</span>
+            </button>
+            <button class="planet-btn" data-planet="moon">
+                <img src="moon.jpg" alt="Lună">
+                <span>Luna</span>
+            </button>
+            <button class="planet-btn" data-planet="earth">
+                <img src="earth.jpg" alt="Pământ">
+                <span>Pământul</span>
+            </button>
+            <button class="planet-btn" data-planet="saturn">
+                <img src="saturn.jpg" alt="Saturn">
+                <span>Saturn</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal pentru Spotify -->
+    <div id="spotify-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Inca un playlist:3!</h2>
+            <iframe src="https://open.spotify.com/embed/playlist/3hBIrfJRM1TFsRVkxScSKI?utm_source=generator&theme=0" 
+                    width="100%" height="352" frameBorder="0" allowfullscreen="" 
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <!-- Modal pentru Wish Jar -->
+    <div id="wish-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Borcanul cu Dorințe</h2>
+            <div class="wish-jar">
+                <div class="jar">
+                    <div class="jar-lid"></div>
+                    <div class="jar-body">
+                        <div class="wishes-container" id="wishes-container">
+                            <!-- Dorințele vor apărea aici -->
+                        </div>
+                    </div>
+                </div>
+                <div class="wish-input-container">
+                    <input type="text" id="wish-input" placeholder="Scrie o dorință...">
+                    <button id="add-wish">Adaugă Dorința</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal pentru Birth Chart -->
+    <div id="chart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Birth Chart</h2>
+            <div class="birth-chart">
+                <div class="chart-info">
+                    <div class="person">
+                        <h3>Miruna</h3>
+                        <p>10 Iunie 2005, 06:30</p>
+                        <p>Galați, România</p>
+                        <div class="signs">
+                            <span class="sign">Gemeni</span>
+                            <span class="sign">Rac</span>
+                            <span class="sign">Rac</span>
+                        </div>
+                    </div>
+                    <div class="connection">
+                        <div class="heart">💕</div>
+                        <p>Suntem meniti sa fim impreuna:3!</p>
+                    </div>
+                    <div class="person">
+                        <h3>Octav</h3>
+                        <p>19 Ianuarie 2003, 00:35</p>
+                        <p>Constanța, România</p>
+                        <div class="signs">
+                            <span class="sign">Capricorn</span>
+                            <span class="sign">Leu</span>
+                            <span class="sign">Balanta</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="compatibility">
+                    <h4>🔮 Compatibilitatea Voastră</h4>
+                    <div class="compatibility-item">
+                        <span>Luna mea se conjunctează cu Soarele tau, aducând echilibru emoțional</span>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="compatibility-item">
+                        <span>Nodurile lunare indică o lecție karmică comună</span>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="compatibility-item">
+                        <span>Jupiter în harta ta susține creșterea și expansiunea relația noastra</span>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal pentru Mesaje -->
+    <div id="messages-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Pentru ca meriti</h2>
+            <div class="messages-container">
+                <div class="message-card active" id="message-0">
+                    <p>Sa ai grija de tine si de sufletul tau!</p>
+                </div>
+                <div class="message-card" id="message-1">
+                    <p>Sa fii mandru de ceea ce esti si ceea ce o sa devii!</p>
+                </div>
+                <div class="message-card" id="message-2">
+                    <p>Să mănânci și să bei apă și în momentele în care e greu!</p>
+                </div>
+                <div class="message-card" id="message-3">
+                    <p>Sa fii iubit neconditionat! </p>
+                </div>
+                <div class="navigation">
+                    <button id="prev-message">← Anterior</button>
+                    <span id="message-counter">1 / 4</span>
+                    <button id="next-message">Următorul →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal pentru Tort -->
+    <div id="cake-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>🎂 La Mulți Ani Nouă!</h2>
+            <div class="cake-container">
+                <div class="cake">
+                    <div class="cake-layer cake-bottom"></div>
+                    <div class="cake-layer cake-middle"></div>
+                    <div class="cake-layer cake-top"></div>
+                    <div class="candle">
+                        <div class="candle-stick"></div>
+                        <div class="flame"></div>
+                    </div>
+                </div>
+                <button id="blow-candle">Suflă în Lumânare! 🌬️</button>
+                <div class="celebration" id="celebration"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
